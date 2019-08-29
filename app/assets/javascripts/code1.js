@@ -22,6 +22,9 @@ $(document).on("turbolinks:load", function () {
     let time = 0;
     let timerSlow;
     let s = false;
+    let timerDraw;
+    let timerLogic;
+    let timerPopulation;
 
     function drawFon() {
         holst.fillStyle = '#000000';
@@ -317,6 +320,9 @@ $(document).on("turbolinks:load", function () {
                     dataType: JSON,
                     data: {point: JSON.stringify (max), time: JSON.stringify (time)}
                 });
+		clearInterval(timerDraw);
+		clearInterval(timerLogic);
+		clearInterval(timerPopulation);
             }
         }
     }
@@ -345,8 +351,8 @@ $(document).on("turbolinks:load", function () {
         }
         if (keyNumber === 87) s = true;
     }
-    window.onkeyup = function (event) {
 
+    window.onkeyup = function (event) {
         let keyNumber = event.keyCode;
         console.log (keyNumber);
         if (keyNumber === 65) a = false;
@@ -377,6 +383,12 @@ $(document).on("turbolinks:load", function () {
         bullets = [];
         score = 0;
         scoreLabel.innerHTML = scoretxt + score;
+	document.getElementById("canva").scrollIntoView();
+	timerDraw = setInterval(Redraw, 20);
+    	timerLogic = setInterval(Logic, 20);
+    	timerPopulation = setInterval(Population, 1000);
+	canva.scrollIntoView();
+	
     }
 
     restartBtn.onclick = function () {
@@ -396,10 +408,5 @@ $(document).on("turbolinks:load", function () {
         scoreLabel.hidden = false;
         scoreLabel.innerHTML = scoretxt + score;
     }
-
-
-    let timerDraw = setInterval(Redraw, 20);
-    let timerLogic = setInterval(Logic, 20);
-    let timerPopulation = setInterval(Population, 1000);
 
 });
