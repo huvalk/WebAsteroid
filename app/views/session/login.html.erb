@@ -1,0 +1,18 @@
+<div id = "authBox">
+  <span class = "bigText"><%= t 'entry' %></span>
+  <hr>
+  <%= form_tag("../session/create?locale=#{I18n.locale}", :method => 'post') do %>
+    <%= label_tag (t 'name') %>
+    <br>
+    <%= text_field_tag :login %>
+    <br>
+    <%= label_tag (t 'pass') %>
+    <br>
+    <%= password_field_tag :password %>
+    <br>
+    <br>
+    <%= submit_tag (t 'enter') %>
+  <% end %>
+  <br>
+  <p> <%= t 'yet' %> <%= link_to (t 'reg'),new_user_path({:locale => I18n.locale}) %></p>
+</div>

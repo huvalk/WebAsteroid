@@ -1,0 +1,33 @@
+<%= form_with(model: user, local: true) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+      <% user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<br>
+  <div class="field">
+    <%= form.label :name, (t 'name') %>
+    <br>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password, (t 'pass') %>
+    <br>
+    <%= form.password_field :password %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pasrep, (t 'rep') %>
+    <br>
+    <%= form.password_field :pasrep %>
+  </div>
+  <br>
+  <div class="actions">
+    <%= form.submit (t 'create') %>
+  </div>
+<% end %>

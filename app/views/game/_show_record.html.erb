@@ -1,0 +1,15 @@
+<table>
+  <thead>
+  <tr>
+    <th><%= t 'point' %></th>
+    <th><%= t 'time' %></th>
+  </tr>
+  </thead>
+  <% @infos.each do |cur| %>
+    <tr>
+      <td class = "left"><%= cur.score %></td>
+      <td class = "right"><%= cur.time.hour %>:<%= cur.time.min %>:<%= cur.time.sec %></td>
+    </tr>
+  <% end %>
+</table>
+

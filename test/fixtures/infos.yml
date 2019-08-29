@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  score: 1
+  time: 2018-12-11 21:15:07
+  user: one
+
+two:
+  score: 1
+  time: 2018-12-11 21:15:07
+  user: two

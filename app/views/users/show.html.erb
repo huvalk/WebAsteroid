@@ -1,0 +1,14 @@
+
+<div id = "greatingBox">
+  <p>
+    <strong>  <%= @user.name %></strong>
+  </p>
+
+  <p>
+    <%= t 'createdtxtone' %>
+    <br>
+    <%= t 'createdtxttwo' %>
+  </p>
+
+  <%= link_to (t 'enter'), session_login_path({:locale => I18n.locale}) %>
+</div>

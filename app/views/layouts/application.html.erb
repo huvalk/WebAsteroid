@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TheGamev1</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <div id = "langBox">
+    <%= link_to 'EN', locale_lang_path({:lang => 'en', :cont => (controller_name), :act => (action_name)})%>
+     |
+    <%= link_to 'RU', locale_lang_path({:lang => 'ru', :cont => (controller_name), :act => (action_name)})%>
+  </div>
+    <%= yield %>
+  </body>
+</html>

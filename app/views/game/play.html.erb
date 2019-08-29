@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= t 'title' %></title>
+  <link rel = "stylesheet" type = "text/css" href = "/assets/style.css"/>
+</head>
+<body>
+
+
+
+<div id = "gameBox" hidden>
+  <canvas id = "canva" width = "800px" height = "800px"></canvas>
+  <div id = "scoreLabel" ><%= t 'score' %></div>
+  <div id = "endLabel" hidden><%= t 'end' %></div>
+  <br>
+  <button id = "pauseBtn"><%= t 'pause' %></button>
+  <button id = "startBtn"><%= t 'again' %></button>
+  <form class="button_to" method="get" action="/?locale=<%= I18n.locale  %>"><input type="submit" value="<%= t 'menu' %>"></form>
+</div>
+
+
+<div id = "centerBox" hidden>
+  <div id = "mainMenu" class = "myBox">
+    <span class = "bigText"><%= t 'title' %></span>
+    <hr>
+    <div class = "separator"></div>
+    <div align = "center">
+      <button id = "b1"><%= t 'start' %></button>
+      <div class = "separator"></div>
+      <button id = "b2"><%= t 'records' %></button>
+      <div class = "separator"></div>
+      <button id = "b3"><%= t 'descripe' %></button>
+      <div class = "separator"></div>
+      <button id = "b4"><%= t 'aboutme' %></button>
+    </div>
+  </div>
+
+  <div id = "aboutCreator" class = "myBox" hidden>
+    <span class = "bigText"><%= t 'aboutme' %></span>
+    <hr>
+    <div>
+      <p>
+        <%= t 'aboutmetxt' %>
+      </p>
+      <div class = "separator"></div>
+      <div align = "center">
+        <button id = "b5"><%= t 'menu' %></button>
+      </div>
+    </div>
+  </div>
+
+  <div id = "aboutGame" class = "myBox" hidden>
+    <span class = "bigText"><%= t 'descripe' %></span>
+    <hr>
+    <div>
+      <p>
+        <%= t 'aboutgametxt' %>
+      </p>
+      <p> <%= t 'enjoy' %></p>
+      <div class = "separator"></div>
+      <div align = "center">
+        <button id = "b6"><%= t 'menu' %></button>
+      </div>
+    </div>
+  </div>
+
+  <div id = "recordBox" class = "myBox" hidden>
+    <span class = "bigText"><%= t 'records' %></span>
+    <hr>
+    <%= render 'show_record' %>
+    <br>
+    <div align = "center">
+      <button id = "b7"><%= t 'menu' %></button>
+    </div>
+  </div>
+
+
+</div>
+
+<script src = "/assets/code1.js"></script>
+<script src = "/assets/basicScript.js"></script>
+<script src = "/assets/mainScript.js"></script>
+
+</body>
+</html>

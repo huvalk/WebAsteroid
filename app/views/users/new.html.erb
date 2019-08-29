@@ -1,0 +1,8 @@
+<div id = "authBox">
+
+  <span class = "bigText"><%= t 'newuser' %></span>
+  <hr>
+<%= render 'form', user: @user %>
+
+<%= link_to (t 'back'), session_login_path({:locale => I18n.locale}) %>
+</div>

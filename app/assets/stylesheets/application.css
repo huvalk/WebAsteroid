@@ -1,0 +1,129 @@
+body{
+    background-color: #333333;
+    color: black;
+    font-size: 30px;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    margin-top: 80px;
+}
+
+table {
+    border: 2px solid #000000;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#recordBox{
+}
+
+.left {
+    border-bottom: 2px solid #000000;
+    border-right: 2px solid #000000;
+    border-top: 2px solid #000000;
+}
+
+.right {
+    border-bottom: 2px solid #000000;
+    border-left: 2px solid #000000;
+    border-top: 2px solid #000000;
+}
+
+#centerBox {
+    margin: 0 auto;
+    width: 800px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+#langBox{
+    margin: 0px;
+    width: 40px;
+    padding: 3px;
+    background-color: white;
+    border-radius: 2px;
+    z-index: 1;
+    text-align: center;
+    font-size: 10px;
+}
+
+#authBox{
+    margin: 0 auto;
+    width: 800px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 1;
+    text-align: center;
+}
+
+
+#greatingBox{
+  margin: 0 auto;
+  width: 800px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  z-index: 1;
+  text-align: center;
+}
+
+input[type="submit"] {
+    padding: 20px;
+}
+input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: #6cbcec;
+}
+
+input{
+    font-size: 30px;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: #444444;
+    padding: 5px;
+    width: 300px;
+    outline: none;
+    border-width: 4px;
+    border-color: #000000;
+    border-radius: 15px;
+}
+
+
+#gameBox{
+    margin: 0 auto;
+    width: 800px;
+    height: 830px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 2;
+    text-align: center;
+}
+
+.separator{
+    padding-top: 30px;
+}
+
+.bigText{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+button{
+    font-size: 30px;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: #444444;
+    padding: 20px;
+    width: 300px;
+    outline: none;
+    border-width: 4px;
+    border-color: #000000;
+    border-radius: 15px;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #6cbcec;
+}
